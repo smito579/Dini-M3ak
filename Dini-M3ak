@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dini m3ak - ديني معاك</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, footer { background: #004d40; color: white; padding: 1rem; text-align: center; }
+    nav a { margin: 0 1rem; color: white; text-decoration: none; }
+    .container { padding: 2rem; max-width: 800px; margin: auto; }
+    .btn { background: #00796b; color: white; padding: 0.5rem 1rem; border: none; cursor: pointer; }
+    .btn:hover { background: #004d40; }
+    form input, form select, form textarea { display: block; width: 100%; margin-bottom: 1rem; padding: 0.5rem; }
+    .note { font-size: 0.9rem; color: #555; }
+    .important { color: #c62828; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dini m3ak - ديني معاك</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#ajouter">Proposer un trajet</a>
+      <a href="#recherche">Rechercher un trajet</a>
+      <a href="#paiement">Confirmer le paiement</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="recherche">
+      <h2>Rechercher un trajet</h2>
+      <form>
+        <input type="text" placeholder="Départ" required />
+        <input type="text" placeholder="Destination" required />
+        <input type="date" required />
+        <button class="btn">Chercher</button>
+      </form>
+    </section>
+
+    <section id="ajouter">
+      <h2>Proposer un trajet</h2>
+      <p class="note important">* Avant validation, vous devez payer 50 DA via BaridiMob et envoyer le reçu (capture d'écran) par WhatsApp au 05xx xx xx xx ou via le formulaire ci-dessous.</p>
+      <p class="note">Une fois le formulaire soumis, votre annonce sera mise en attente jusqu'à vérification du paiement. Merci de votre compréhension.</p>
+      <form>
+        <input type="text" placeholder="Nom du conducteur" required />
+        <input type="text" placeholder="Téléphone" required />
+        <input type="text" placeholder="Départ" required />
+        <input type="text" placeholder="Destination" required />
+        <input type="date" required />
+        <input type="time" required />
+        <input type="number" placeholder="Places disponibles" required />
+        <textarea placeholder="Commentaires (facultatif)"></textarea>
+        <button class="btn">Soumettre l'annonce</button>
+      </form>
+    </section>
+
+    <section id="paiement">
+      <h2>Confirmer le paiement (50 DA)</h2>
+      <p class="note">Veuillez remplir ce formulaire après avoir payé via BaridiMob pour que nous puissions valider votre annonce.</p>
+      <form enctype="multipart/form-data">
+        <input type="text" placeholder="Nom complet" required />
+        <input type="text" placeholder="Téléphone (même que dans l'annonce)" required />
+        <input type="text" placeholder="Ville ou Trajet proposé" required />
+        <label for="recu">Télécharger le reçu BaridiMob (image) :</label>
+        <input type="file" id="recu" name="recu" accept="image/*" required />
+        <button class="btn">Envoyer le reçu</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>Contact : 05xx xx xx xx | WhatsApp disponible</p>
+    <p>&copy; 2025 Dini m3ak - ديني معاك</p>
+  </footer>
+</body>
+</html>
